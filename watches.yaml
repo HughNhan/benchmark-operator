@@ -2,6 +2,9 @@
 - version: v1alpha1
   group: ripsaw.cloudbulldozer.io
   kind: Benchmark
-  playbook: /opt/ansible/playbook.yml
+  #playbook: /opt/ansible/playbook.yml
+  playbook: /home/kni/benchmark-operator/playbook.yml
+  role: /home/kni/benchmark-operator/roles.yml
+
   reconcilePeriod: 3s
   manageStatus: false

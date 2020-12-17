@@ -35,6 +35,15 @@
       - name = benchmark-operator
   register: bo
 
+# Point redis-cli to redis-server runnin on "operator-sdk --local"
+- set_fact:
+  bo:
+      resources:
+        - status:
+            #podIP: 127.0.0.1
+            #podIP:  172.22.0.1
+            podIP:  192.168.222.1
+
 - name: Capture ServiceIP
   k8s_facts:
     kind: Service
